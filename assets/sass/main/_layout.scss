@@ -1,0 +1,128 @@
+// ======================================
+// カラム
+// ======================================
+// .l-column {
+//   display: flex;
+//   flex-wrap: wrap;
+//   &.reverse {
+//     flex-direction: row-reverse;
+//   }
+  
+//   &.col-half {
+//     justify-content: space-between;
+//     .col_inner {
+//       width: 48%;
+//     }
+//   }
+//   &.col2 {
+//     margin-bottom: -3%;
+//     justify-content: space-between;
+//     .col-inner {
+//       width: 48.5%;
+//       margin-bottom: 3%;
+//     }
+//   }
+//   &.col3 {
+//     margin-bottom: -7.25%;
+//     .col-inner {
+//       width: 28.5%;
+//       margin: 0 7.25% 7.25% 0;
+//       &:nth-child(3n) {
+//         margin-right: 0;
+//       }
+//       &:last-child {
+//         margin-right: 0;
+//       }
+//     }
+//   }
+//   &.col4 {
+//     margin-bottom: -3%;
+//     .col-inner {
+//       width: 22.75%;
+//       margin: 0 3% 3% 0;
+//       &:nth-child(4n) {
+//         margin-right: 0;
+//       }
+//     }
+//   }
+
+//   &.center {
+//     justify-content: center;
+//   }
+// }
+
+
+// ======================================
+// カード
+// ======================================
+// .card {
+//   .c-image {
+//     margin-bottom: 16px;
+//     position: relative;
+//     figcaption {
+//       position: absolute;
+//       right: 12px;
+//       bottom: 12px;
+//       font-family: $custom-font01;
+//       font-size: 10px;
+//       color: #FFF;
+//     }
+//   }
+//   .c-title {
+//     margin-bottom: 12px;
+//     padding-right: 50px;
+//     font-size: 24px;
+//     position: relative;
+//     &::after {
+//       content: '';
+//       width: 40px;
+//       height: 40px;
+//       border-radius: 50%;
+//       border: 1px solid #000;
+//       display: block;
+//       background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211.338%22%20height%3D%2211.327%22%3E%3Cpath%20fill%3D%22%23251e1c%22%20d%3D%22M5.675%2011.327A.776.776%200%200%201%205.126%2010L8.69%206.439H.776a.776.776%200%201%201%200-1.551H8.69L5.126%201.324a.778.778%200%200%201%201.1-1.1l4.888%204.888a.776.776%200%200%201%200%201.1L6.223%2011.1a.771.771%200%200%201-.548.227%22%2F%3E%3C%2Fsvg%3E');
+//       background-repeat: no-repeat;
+//       background-position: center;
+//       background-size: 12px;
+//       position: absolute;
+//       top: -2px;
+//       right: 0;
+//     }
+//   }
+//   .c-title2 {
+//     font-size: 16px;
+//     line-height: 1.75;
+//     display: -webkit-box;
+//     -webkit-box-orient: vertical;
+//     -webkit-line-clamp: 2;
+//     overflow: hidden;
+//   }
+//   .c-title3 {
+//     font-size: 20px;
+//     line-height: 1.7;
+//     // display: -webkit-box;
+//     // -webkit-box-orient: vertical;
+//     // -webkit-line-clamp: 2;
+//     // overflow: hidden;
+//   }
+//   .c-date {
+//     margin-top: 10px;
+//     display: inline-block;
+//     font-family: $custom-font01;
+//     font-size: 12px;
+//     color: #444444;
+//   }
+//   .c-price {
+//     margin-top: 5px;
+//     font-size: 14px;
+//     span {
+//       margin-right: 5px;
+//       font-size: 18px;
+//       font-weight: bold;
+//     }
+//   }
+//   p {
+//     font-size: 14px;
+//     text-align: justify;
+//   }
+// }

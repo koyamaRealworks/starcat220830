@@ -1,0 +1,9 @@
+
+$baseWindow: 768;
+@function vw($pixelsVw) {
+  @return calc($pixelsVw / $baseWindow * 100vw);
+}
+
+//タブレット以下
+@include mqTAB {
+}

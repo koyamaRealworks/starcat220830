@@ -1,0 +1,69 @@
+
+// ======================================
+// フッター
+// ======================================
+.site-footer {
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .area01 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: $blue;
+  }
+  .area02 {
+    padding: 30px;
+    position: relative;
+    z-index: 9;
+    background-color: #fff;
+    text-align: center;
+    a {
+      display: inline-block;
+    }
+  }
+}
+
+.sns-list {
+  display: flex;
+  align-items: center;
+  color: $yellow;
+  dt {
+    margin-right: 40px;
+    border-bottom: 3px solid $yellow;
+    letter-spacing: 0;
+    font-size: 20px;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+  }
+  li {
+    &:not(:last-child) {
+      margin-right: 26px;
+    }
+  }
+  a {
+    display: block;
+    transition: transform .3s ease-in-out;
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.footer-catch {
+  position: absolute;
+  top: -94px;
+  right: 20px;
+  .img01 {
+    transform: rotate(12deg);
+    animation: pyonpyon 3s ease infinite;
+  }
+  .img02 {
+    position: absolute;
+    top: 70px;
+    right: 250px;
+  }
+}

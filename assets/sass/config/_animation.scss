@@ -1,0 +1,170 @@
+
+// ======================================
+// 花火アニメーション
+// ======================================
+@keyframes zoomInAnime {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  45% {
+    opacity: .5;
+    transform: scale(1.1);
+  }
+  75% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+
+  50% {
+    left: 70%;
+    transform: scaleX(.2) translateX(-50%);
+  }
+
+  75% {
+    left: 70%;
+    transform: scaleX(.2) translateX(-50%);
+  }
+
+  100% {
+    left: 50%;
+    transform: scaleX(1) translateX(-50%);
+  }
+}
+
+@keyframes pyonpyon {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  5% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(0, 0);
+  }
+
+  20% {
+    transform: translate(0, -30px);
+  }
+
+  25% {
+    transform: translate(0, 0);
+  }
+
+  30% {
+    transform: translate(0, -30px);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes pyonpyon2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  5% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(0, 0);
+  }
+
+  20% {
+    transform: translate(0, -10px);
+  }
+
+  25% {
+    transform: translate(0, 0);
+  }
+
+  30% {
+    transform: translate(0, -10px);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+@keyframes roopText {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -874px center;
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  transform: translateY(20px);
+  &.is-active {
+    animation: fadein .5s ease-in-out;
+
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes biyoon {
+  0% {
+    transform: scaleY(1.0);
+  }
+  30% {
+    transform: scaleY(1.4);
+  }
+  100% {
+    transform: scaleY(1.0);
+  }
+}
+
+
+@keyframes DownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-170px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

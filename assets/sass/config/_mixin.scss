@@ -1,0 +1,148 @@
+
+// ======================================
+// ブレークポイント
+// ======================================
+
+// 広いPC以上専用スタイル
+@mixin mqPCL {
+  @media (min-width: ($widthPC + 1)) {
+    @content;
+  }
+}
+// 狭いPC専用(＆横置きタブレット)スタイル
+@mixin mqPCS {
+  @media (min-width: $widthTAB) and (max-width: ($widthPC)) {
+    @content;
+  }
+}
+// PC専用（タブレット以上）
+@mixin mqPC {
+  @media (min-width: $widthTAB) {
+    @content;
+  }
+}
+// タブレット以下
+@mixin mqTAB {
+  @media (max-width: ($widthTAB - 1)) {
+    @content;
+  }
+}
+// スマートフォン以下
+@mixin mqSP {
+  @media (max-width: ($widthSP - 1)) {
+    @content;
+  }
+}
+
+
+// =======================================================
+// 
+// フォントサイズ  @include fontsize(12);
+// リンクカラー @include link-color(#333333);
+// 角丸 @include border-radius(5px);
+// 透明度 opacity  @include opacity(.75);
+// トランジション  @include transition(0.5s);
+// メディアクエリ PCのみ         @include mq(medium)
+// メディアクエリ タブレット以下   @include mq(medium, max, true)
+// メディアクエリ スマホ以下      @include mq(small, max, true)
+// フレックスボックス  @include flexbox();
+// 
+// =======================================================
+
+//フォントサイズ px＆rem
+//呼び出し例：@include fontsize(12);
+@mixin fontsize($size: 24, $base: 10) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+//トランジション定義 @include transition(0.5s);
+@mixin transition($duration:0.5s) {
+  -webkit-transition: $duration ease-out;
+  -moz-transition: $duration ease-out;
+  -ms-transition: $duration ease-out;
+  -o-transition: $duration ease-out;
+  transition: $duration ease-out;
+}
+
+//テキストを消す @include hide-text;
+@mixin hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+//clearfix
+//呼び出し例 @extend %clearfix;
+@mixin cf {
+  *zoom: 1;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+%clearfix {
+  @include cf;
+}
+
+//疑似要素 :before, :after
+%bfaf {
+  position: absolute;
+  display: block;
+  content: "";
+}
+@mixin bfaf {
+  @extend %bfaf;
+}
+
+//テキストリンクスタイル定義
+@mixin link-color-dark($color) {
+  color: $color;
+  &:hover, &:active, &:focus {
+    color: lighten($color, 20%);
+  }
+}
+@mixin link-color-light($color) {
+  color: $color;
+  &:hover, &:active, &:focus {
+    color: darken($color, 20%);
+  }
+}
+
+@mixin txt_link($style) {
+  color: $link_color;
+  &:link {
+    color: $unvisited_color;
+  }
+  &:visited {
+    //olor: $visited_color;
+  }
+  &:hover {
+    color: $hover_color;
+  }
+  &:active {
+    color: $active_color;
+  }
+  //例 @include txt_link(linkLine);    常に下線あり
+  @if $style == linkLine {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  //例 @include txt_link(hoverLine);   hover時に下線あり
+  @else if $style == hoverLine {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  //例 @include txt_link(noLine);  常に下線なし
+  @else if $style == noLine {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

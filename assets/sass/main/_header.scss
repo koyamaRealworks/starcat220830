@@ -1,0 +1,118 @@
+
+// ======================================
+// ヘッダー
+// ======================================
+.site-header {
+  width: 100%;
+  padding: 30px 28px 6px 44px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
+  &.is-fixed {
+    position: fixed;
+    background-color: #fff;
+    animation: DownAnime .5s forwards;
+    // .hp_st0 {
+    //   fill: #064b9e;
+    // }
+    // .hp_st1 {
+    //   fill: #000;
+    // }
+  }
+}
+
+.header-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.header-title {
+  line-height: 0;
+  .catch {
+    margin-bottom: 5px;
+  }
+}
+
+.header-navi {
+  margin-left: auto;
+  ul {
+    display: flex;
+  }
+  li {
+    text-align: center;
+    + li {
+      margin-left: 20px;
+    }
+  }
+  .btn {
+    width: 234px;
+    height: 58px;
+    padding-left: 28px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 3px solid #000;
+    border-radius: 27px;
+    box-shadow: 0 5px 0 #000;
+    color: #fff;
+    letter-spacing: .06em;
+    font-size: 24px;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: "";
+    }
+    &:hover {
+      box-shadow: none;
+      transform: translateY(5px);
+    }
+  }
+  .menu01 {
+    background-color: $pink;
+    &::after {
+      width: 74px;
+      height: 72px;
+      right: 8px;
+      background-image: url(../../images/header_menu01.png);
+    }
+    + .caption {
+      color: $pink;
+    }
+  }
+  .menu02 {
+    background-color: $lightBlue;
+    &::after {
+      width: 49px;
+      height: 71px;
+      right: 20px;
+      background-image: url(../../images/header_menu02.png);
+    }
+    + .caption {
+      color: $lightBlue;
+    }
+  }
+  .caption {
+    margin-top: 6px;
+    display: inline-block;
+    font-size: 14px;
+  }
+}
+
+.contact-tel {
+  margin-left: 30px;
+  display: block;
+  svg, img {
+    transition: transform .3s ease-in-out;
+  }
+  &:hover {
+    svg, img {
+      transform: scale(1.1);
+    }
+  }
+}

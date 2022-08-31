@@ -1,0 +1,63 @@
+// ======================================
+// ブレイクポイント指定
+// ======================================
+$widthPC: 1240px;   // PC
+$widthTAB: 834px;   // タブレット
+$widthSP: 834px;    // スマートフォン
+
+
+// ======================================
+// フォント関連の設定
+// ======================================
+$default-root-font-size: 62.5% !important;
+$default-font-size: 1.0rem !default;    //1rem=10px
+$default-line-height: 1.6 !default;
+$default-font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif !default;
+// $default-font-family: YakuHanJPs, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif !default;
+$serif-font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "Noto Serif JP", serif;
+$custom-font-family: corporate-logo-ver2, sans-serif;
+
+
+// ======================================
+// コンテンツサイズ
+// ======================================
+$cnt_width: 1200px;
+// $main_cnt_width: 100%;
+// $side_cnt_width: 270px;
+
+
+// ======================================
+// カラー
+// ======================================
+$main_color: #000;
+$placeholder_color: #868585;
+$red: #b33f4c;
+$blue: #064b9e;
+$lightBlue: #009dff;
+$yellow: #fdd000;
+$green: #229254;
+$pink: #ff00e2;
+
+
+// ======================================
+// 余白の定義
+// ======================================
+//基本マージン
+$default_margin: 50px;
+//サブマージン
+$sub_margin: calc($default_margin / 2);
+
+//基本パッディング
+$default_padding: 50px;
+//サブパッディング
+$sub_padding: calc($default_padding / 2);
+
+//SP - 基本マージン
+$sp_default_margin: 30px;
+//SP - サブマージン
+$sp_sub_margin: calc($sp_default_margin / 2);
+
+//SP - 基本パッディング
+$sp_default_padding: 50px;
+//SP - サブパッディング
+$sp_sub_padding: calc($sp_default_padding / 2);

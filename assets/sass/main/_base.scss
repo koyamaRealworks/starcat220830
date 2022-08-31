@@ -1,0 +1,181 @@
+
+// ======================================
+// サイト全体の設定
+// ======================================
+html {
+  font-size: $default-root-font-size;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  color: #000;
+  word-break: break-all;
+  letter-spacing: .05em;
+  font-weight: 700;
+  font-size: 1.6rem;
+  font-family: $custom-font-family;
+  line-height: $default-line-height;
+  &.fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+  }
+}
+
+
+// ======================================
+// 共通スタイル
+// ======================================
+.section-block {
+  width: 100%;
+  padding: 100px 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  width: $cnt_width;
+  // max-width: 100%;
+  margin: 0 auto;
+}
+
+.pd {
+  &-x_none {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  &-y_none {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  &-t_none {
+    padding-top: 0 !important;
+  }
+  &-b_none {
+    padding-bottom: 0 !important;
+  }
+}
+
+.text-area {
+  p {
+    line-height: 1.9285;
+  }
+}
+
+
+// ======================================
+// 背景
+// ======================================
+// .bg {
+//   &-c01 {
+//     background-color: #f6f8f4;
+//   }
+// }
+
+
+// ======================================
+// リンク
+// ======================================
+a {
+  color: #444;
+  text-decoration: none;
+  transition: .3s ease-out;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// .link {
+//   &-underline {
+//     text-decoration: underline;
+//   }
+//   &-block {
+//     display: block;
+//   }
+//   &-color {
+//     color: #2175cb;
+//   }
+// }
+
+
+// ======================================
+// 画像
+// ======================================
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+svg {
+  vertical-align: bottom;
+}
+
+
+// ======================================
+// テキスト
+// ======================================
+p {
+  line-height: calc(53 / 30);
+  &:not(:last-child) {
+    margin-bottom: 1.0em;
+  }
+}
+
+.text {
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-default {
+    font-family: $default-font-family;
+  }
+  // &-serif {
+  //   font-family: $serif-font-family;
+  // }
+  // &-caution {
+  //   color: $red;
+  // }
+  // &-bold {
+  //   font-weight: bold;
+  // }
+}
+
+
+// ======================================
+// メディアクエリで表示・非表示切り替え
+// ======================================
+
+// PCのみ表示
+// .pc_only {
+//   display: none;
+
+//   @include mqPC {
+//     display: inherit;
+//   }
+// }
+
+//タブレットのみ
+.tab_only {
+  display: none;
+
+  @include mqTAB {
+    display: inherit;
+  }
+}
+
+// スマホのみ表示
+.sp_only {
+  display: none;
+
+  @include mqSP {
+    display: inherit;
+  }
+}

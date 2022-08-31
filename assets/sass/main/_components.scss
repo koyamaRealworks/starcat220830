@@ -1,0 +1,188 @@
+
+// ======================================
+// 見出し・タイトル
+// ======================================
+// .headline {
+//   &-01 {
+//     margin-bottom: 3.0rem;
+//     font-weight: 400;
+//     font-size: 2.4rem;
+//     line-height: 1;
+//   }
+// }
+
+
+// ======================================
+// ボタン関連
+// ======================================
+// .btn {
+//   //もっと見るボタン
+//   &-more {
+//     width: 218px;
+//     height: 48px;
+//     padding-top: 4px;
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     border: 1px solid #0d0c0c;
+//     color: #fff;
+//     font-size: 1.6rem;
+//   }
+// }
+
+
+// ======================================
+// リスト
+// ======================================
+ul {
+  list-style-type: none;
+  &.dot {
+    list-style-type: none;
+    li {
+      margin-left: 1.1em;
+      text-indent: -1.1em;
+      &:before {
+        content: "・";
+      }
+      &:not(:last-child) {
+        margin-bottom: .3em;
+      }
+    }
+  }
+  &.note {
+    list-style-type: none;
+    li {
+      margin-left: 1.1em;
+      text-indent: -1.1em;
+      &:before {
+        content: "※";
+        font-family: cursive;
+      }
+      &:not(:last-child) {
+        margin-bottom: .3em;
+      }
+    }
+  }
+}
+
+
+// ======================================
+// 米印リスト
+// ======================================
+// dl.note {
+//   dt {
+//     position: relative;
+//     span {
+//       position: absolute;
+//     }
+//   }
+//   dd {
+//     padding-left: 1em;
+//   }
+// }
+
+
+// ======================================
+// ページャー
+// ======================================
+// .pager-number {
+//   margin-top: 60px;
+//   display: flex;
+//   justify-content: center;
+//   .page-numbers {
+//     width: 40px;
+//     height: 40px;
+//     margin: 0 10px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     font-weight: 400;
+//     font-size: 14px;
+//     &.current {
+//       color: $green;
+//       text-decoration: underline;
+//     }
+//     &:hover {
+//       color: $green;
+//     }
+//   }
+//   .prev, .next {
+//     white-space: nowrap;
+//   }
+// }
+
+
+// ======================================
+// ローディング
+// ======================================
+// #loading {
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   background-color: #000;
+//   z-index: 9999;
+//   .loading-wrap {
+//     position:absolute;
+//     width: 600px;
+//     height: 36px;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     overflow: visible;
+//     user-select: none;
+//     cursor: default;
+//     div {
+//       position: absolute;
+//       width: 20px;
+//       height: 36px;
+//       opacity: 0;
+//       font-family: $custom-font01;  // Nunito Sans
+//       animation: move 2s linear infinite;
+//       transform: rotate(180deg);
+//       color:$main_color;
+//       &:nth-child(2) {
+//         animation-delay: 0.2s;
+//       }
+//       &:nth-child(3) {
+//         animation-delay: 0.4s;
+//       }
+//       &:nth-child(4) {
+//         animation-delay: 0.6s;
+//       }
+//       &:nth-child(5) {
+//         animation-delay: 0.8s;
+//       }
+//       &:nth-child(6) {
+//         animation-delay: 1.0s;
+//       }
+//       &:nth-child(7) {
+//         animation-delay: 1.2s;
+//       }
+//     }
+//   }
+// }
+
+// @keyframes move {
+//   0% {
+//     left: 0;
+//     opacity: 0;
+//   }
+//   35% {
+//     left: 41%; 
+//     transform: rotate(0deg);
+//     opacity: 1;
+//   }
+//   65% {
+//     left: 59%; 
+//     transform: rotate(0deg); 
+//     opacity: 1;
+//   }
+//   100% {
+//     left: 100%; 
+//     transform: rotate(-180deg);
+//     opacity:0;
+//   }
+// }
